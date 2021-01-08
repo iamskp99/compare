@@ -1,0 +1,25 @@
+{
+  "name": "compare",
+  "version": "1.0.0",
+  "description": "A comparison app based on elo-algorithm.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shashank Kumar Pandey",
+  "license": "ISC",
+  "engines": {
+    "node": "14.15.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.9",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,14 @@
+<%- include('header'); -%>
+<h2 style="color : red">Standings</h2>
+<% var i = 0; %>
+<% var cnt = 1; %>
+  <% while(i < sarray.length){ %>
+      <div class="column">
+        <img src="data:<%=sarray[i].img.contentType%>;base64,<%=sarray[i].img.data.toString('base64')%>" width="160" height="140">
+        <h5>Rank : <%=i+1%>&nbsp Name : <%= sarray[i].name%></h5>
+      </div>
+    <% i = i+1;%>
+    <%cnt = cnt+1;%>
+  <%}%>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<%- include('header'); -%>
+<h2>This is a photo comparison WEB APP based on <b>Elo-Algorithm</b></h2>
+<br>
+<h4>You can create your own page by clicking on <b>New +</b> button above.</h4>
+<h4>You can also search your page by your custom made key.</h4>
+<br>
+<h4>If you are bored then you can check out this example</h4>
+<form  action="/games/example" method="GET">
+  <button type="submit" name="button" class="btn btn-primary">Example</button>
+</form>
+<br>
+<h4>How the ratings are calculated?</h4>
+<p><b>The ratings are calculated by elo-algorithm.</b></p>
+<p>Elo Rating Algorithm is widely used rating algorithm that is used to rank players in many competitive games.
+Players with higher ELO rating have a higher probability of winning a game than a player with lower ELO rating. After each game, ELO rating of players is updated. If a player with higher ELO rating wins, only a few points are transferred from the lower rated player. However if lower rated player wins, then transferred points from a higher rated player are far greater.</p>
+
+<p><b>Algorithm</b></p>
+<pre>P1: Probability of winning of player with rating1.
+ P2: Probability of winning of player with rating2.
+
+P1 = (1.0 / (1.0 + pow(10, ((rating2 – rating1) / 400))))
+P2 = (1.0 / (1.0 + pow(10, ((rating1 – rating2) / 400))))
+Obviously, P1 + P2 = 1.
+
+The ratings of players are updated using the formula given below :-
+
+rating = rating + K*(Actual Score – Expected score)
+
+</pre>
+<%- include('footer'); -%>

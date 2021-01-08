@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+
+<h2><%= gameTitle %></h2>
+<center>
+        <table>
+            <tr>
+                <td valign="top" class="image"><center><a href="/elo/winner=<%=players[l[0]]._id%>&loser=<%=players[l[1]]._id%>&url=<%=url%>"> <img class="pic" src="data:<%=players[l[0]].img.contentType%>;base64,<%=players[l[0]].img.data.toString('base64')%>" width="340" height="340" alt=""></a><h4><%=players[l[0]].name%></h4></center></td>
+                <td><h3><b>OR</b></h3></td>
+                <td valign="top" class="image"><center><a href="/elo/winner=<%=players[l[1]]._id%>&loser=<%=players[l[0]]._id%>&url=<%=url%>"> <img class="pic" src="data:<%=players[l[1]].img.contentType%>;base64,<%=players[l[1]].img.data.toString('base64')%>" width="340" height="340" alt=""></a><h4><%=players[l[1]].name%></h4></center></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <!-- <br> -->
+        <form action="/standings/<%= url%>" method="get">
+          <button type="submit" class = "btn btn-primary">Check Standings</button>
+        </form>
+        <br>
+        <form action="/insert" method="post">
+          <button type="submit" class = "btn btn-primary" value = "<%= url %>" name = "user">Add new players</button>
+        </form>
+</center>
+
+<%- include('footer'); -%>

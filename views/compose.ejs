@@ -1,0 +1,22 @@
+<%- include('header0'); -%>
+<h1>Make your comparison page</h1>
+<h4>Choose your key such that it is unique</h4>
+<form class="form-signin" action="/compose" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" name="postTitle" autocomplete="off" class = "form-control">
+    <label>Key</label>
+    <input type="text" name="url" autocomplete="off" class = "form-control">
+    <label>Name</label>
+    <input type="text" name="name" autocomplete="off" class = "form-control">
+    <!-- Choose files -->
+    <br>
+    <label>Upload your photo</label>
+    <input type="file" id="file" name="img" accept="image/*">
+    <br>
+    <br>
+  <button type="submit" name="button" class = "btn btn-primary">Post</button>
+</form>
+
+</body>
+</html>
