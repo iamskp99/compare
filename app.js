@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://admin-iamskp:"+process.enc.password+"@cluster0.8mhaf.mongodb.net/UserDB",{useNewUrlParser : true,useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-iamskp:"+process.env.password+"@cluster0.8mhaf.mongodb.net/UserDB",{useNewUrlParser : true,useUnifiedTopology: true});
 
 //Image Storage
 var storage = multer.diskStorage({
