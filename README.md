@@ -11,4 +11,4 @@ However if lower rated player wins, then transferred points from a higher rated 
 
 The algorithm is in app.js.
 
-Read about elo algorithm here : https://www.geeksforgeeks.org/elo-rating-algorithm/
+Read about elo algorithm here : https://en.wikipedia.org/wiki/Elo_rating_system
